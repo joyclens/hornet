@@ -43,6 +43,31 @@
             overflow-x: hidden;
         }
 
+        :root {
+            --primary: #1e1e1e;
+            --secondary: #0a0a0a;
+            --accent: #ffffff;
+            --text: #ffffff;
+            --text-light: #bababa;
+            --white: #101010;
+            --black-lighter: #151515;
+            --shadow: 0 2px 16px rgba(45, 45, 45, 0.31);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Satoshi', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
         .navbar {
             position: fixed;
             top: 20px;
@@ -136,17 +161,92 @@
                 text-align: center;
             }
         }
+
+        .team-section {
+            padding: 120px 2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .stats-container {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--black-lighter);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .stats-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-label {
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+
+        .team-category {
+            margin-bottom: 4rem;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+
+        .board-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .board-card {
+            background: var(--black-lighter);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .board-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .board-card h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .board-card p {
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-content">
             <a href="/" class="logo">HR Network</a>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
             <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="/partners">Partners</a>
@@ -155,12 +255,6 @@
             </div>
         </div>
     </nav>
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-    </script>
 
     <main class="team-section">
         <h1 class="section-title">Our Team</h1>
