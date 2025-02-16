@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="theme-color" content="#FCFCFC" />
-    <meta name="robots" content="index,follow" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="https://hr-network.xyz" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="500" />
-    <meta property="og:locale" content="en" />
-    <meta property="og:site_name" content="HR Network" />
-    <meta property="og:title" content="HR Network" />
-    <meta property="og:url" content="https://hr-network.xyz" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HR Network</title>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&display=swap" rel="stylesheet">
     <style>
@@ -71,6 +59,10 @@
             text-decoration: none;
         }
 
+        .logo span {
+            color: var(--accent);
+        }
+
         .nav-links {
             display: flex;
             gap: 2rem;
@@ -87,18 +79,84 @@
             color: var(--accent);
         }
 
-        .mobile-menu-btn {
+        .menu-toggle {
             display: none;
+            cursor: pointer;
             background: none;
             border: none;
             color: var(--text);
             font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--white) 0%, var(--black-lighter) 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            color: var(--text);
+        }
+
+        .hero-text p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--accent);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
         }
 
         @media (max-width: 768px) {
-            .mobile-menu-btn {
+            .navbar {
+                top: 10px;
+                padding: 0.8rem 1.5rem;
+            }
+
+            .menu-toggle {
                 display: block;
             }
 
@@ -114,30 +172,42 @@
                 border-radius: 0 0 12px 12px;
                 flex-direction: column;
                 gap: 1rem;
-                border: 2px solid #151515;
-                border-top: none;
+                text-align: center;
             }
 
             .nav-links.active {
                 display: flex;
             }
 
-            .nav-links a {
-                padding: 0.5rem 0;
-                text-align: center;
+            .hero-container {
+                padding: 0 1rem;
             }
-        }    </style>
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-content">
             <a href="/" class="logo">HR Network</a>
-            <button class="mobile-menu-btn">☰</button>
+            <button class="menu-toggle">☰</button>
             <div class="nav-links">
-                <a href="/team">Team</a>
-                <a href="/partners">Partners</a>
-                <a href="/groups">Groups</a>
-                <a href="/contact">Contact</a>
+                <a href="#team">Team</a>
+                <a href="#partners">Partners</a>
+                <a href="#groups">Groups</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
@@ -153,11 +223,18 @@
     </section>
 
     <script>
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
 
-        mobileMenuBtn.addEventListener('click', () => {
+        menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar')) {
+                navLinks.classList.remove('active');
+            }
         });
     </script>
 </body>
