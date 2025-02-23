@@ -170,6 +170,27 @@
         letter-spacing: -0.02em;
       }
 
+      .footer {
+        text-align: center;
+        padding: 2rem;
+        color: var(--text-light);
+        font-size: 0.9rem;
+        font-family: 'Satoshi', sans-serif;
+        letter-spacing: -0.02em;
+      }
+
+      .footer a {
+        color: var(--text);
+        text-decoration: none;
+        transition: var(--transition);
+        font-family: 'Satoshi', sans-serif;
+        letter-spacing: -0.02em;
+      }
+
+      .footer a:hover {
+        opacity: 0.7;
+      }
+
       @keyframes slide {
         0% {
           transform: translateX(0);
@@ -286,13 +307,10 @@
         </div>
       </div>
     </section>
+    <footer class="footer"> Programmed with <span class="heart">🤍</span> by <a href="https://guns.lol/joy">joymura</a>, for <a href="https://www.roblox.com/communities/34700937/HR-Network#!/about">HR Network</a> & <a href="https://www.roblox.com/users/1100110617/profile">xMa_hdi</a>. </footer>
     <script>
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-      const groupsContainer = document.querySelector('.groups-container');
-      groupsContainer.innerHTML += groupsContainer.innerHTML;
-      menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
-      document.addEventListener('click', e => !e.target.closest('.navbar') && navLinks.classList.remove('active'));
+      document.querySelector('.menu-toggle').addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('active'));
+      document.querySelector('.groups-container').innerHTML += document.querySelector('.groups-container').innerHTML;
     </script>
   </body>
 </html>
