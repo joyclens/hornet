@@ -1,18 +1,18 @@
 /* Desktop styles */
 .navbar {
     position: fixed;
-    top: 30px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 95%;
-    max-width: 1400px;
+    width: 80%;
+    max-width: 1000px;
     background: rgba(20,20,20,.5);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    padding: 1.2rem 2rem;
+    padding: 0.8rem 1.5rem;
     z-index: 1000;
     border: 1px solid rgba(255,255,255,.08);
-    border-radius: 24px;
+    border-radius: 50px;
     transition: .3s cubic-bezier(.4,0,.2,1);
 }
 
@@ -23,7 +23,7 @@
 }
 
 .logo {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
@@ -33,7 +33,7 @@
 
 .nav-links {
     display: flex; 
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .nav-links a {
@@ -41,7 +41,7 @@
     color: #fff;
     font-weight: 500;
     transition: .3s cubic-bezier(.4,0,.2,1);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .menu-toggle {
@@ -51,9 +51,9 @@
 /* Mobile styles */
 @media (max-width: 768px) {
     .navbar {
-        top: 20px; 
-        padding: 1rem 1.5rem;
-        width: 90%;
+        top: 15px; 
+        padding: 0.8rem 1.2rem;
+        width: 85%;
     }
     
     .menu-toggle {
@@ -74,10 +74,10 @@
         right: 0;
         background: rgba(20,20,20,.95);
         backdrop-filter: blur(20px);
-        padding: 1.5rem;
+        padding: 1.2rem;
         border-radius: 20px;
         flex-direction: column;
-        gap: 1.2rem;
+        gap: 1rem;
         text-align: center;
         border: 1px solid rgba(255,255,255,.08);
     }
