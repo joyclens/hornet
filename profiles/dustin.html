@@ -1,87 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>dustin - HR Network</title>
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="profiles-main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="icon" type="image/png" href="/assets/profiles/dustin.png">
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dustin - HR Network</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/assets/profiles/dustin.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    dark: '#030303',
+                    'dark-accent': '#0A0A0A',
+                },
+                fontFamily: {
+                    'satoshi': ['Satoshi', 'sans-serif'],
+                },
+            }
+        }
+    }
+</script>
 </head>
-<body>
+<body class="bg-dark font-satoshi text-white overflow-x-hidden">
+<div class="fixed -z-10 w-full h-screen bg-gradient-to-tr from-purple-500/10 via-transparent to-blue-500/10 opacity-50"></div>
+<div class="fixed -z-10 w-full h-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-dark to-dark opacity-90"></div>
 
-  <main class="profile">
-    <div class="profile-header">
-      <img src="/assets/profiles/dustin.png" alt="dustin" class="avatar" loading="lazy">
-      <h1>dustin</h1>
-      <p>@ddust1n</p>
-      <div class="socials">
-        <a href="https://discord.com/users/769816871989805096" class="social"> 
-          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
-          </svg>
-        </a>
-        <a href="https://www.roblox.com/users/4205808461/profile" class="social"> 
-          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0.16 0 23.68 24">
-            <path fill="currentColor" d="M5.164 0L.16 18.928L18.836 24L23.84 5.072Zm8.747 15.354l-5.219-1.417l1.399-5.29l5.22 1.418l-1.4 5.29z"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    <section class="section">
-      <div class="groups">
-        <a href="https://www.roblox.com/communities/35107354/Northport-Correctional" class="group">
-          <img src="/assets/groups/northport-logo.png" alt="Northport Correctional" loading="lazy">
-          <div>
-            <h3>Northport Correctional</h3>
-            <p>Co Founder</p>
-          </div>
-        </a>
-        <a href="https://www.roblox.com/communities/33205238/Aerborne-Airport-Roleplay" class="group">
-            <img src="/assets/groups/aerborne-logo.png" alt="Aerborne Airport Roleplay" loading="lazy">
-            <div>
-              <h3>Aerborne Airport Roleplay</h3>
-              <p>Vice Chairman</p>
+<main class="flex items-center justify-center min-h-screen py-8">
+    <div class="w-full max-w-4xl mx-auto px-4 space-y-8">
+        <!-- Profile Header -->
+        <div class="flex flex-col items-center p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm">
+            <img src="/assets/profiles/dustin.png" alt="dustin" class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-4">
+            <h1 class="text-2xl md:text-3xl font-bold mb-1">dustin</h1>
+            <p class="text-white/60 mb-4">@ddust1n</p>
+            <div class="flex gap-4">
+                <a href="https://discord.com/users/769816871989805096" class="text-white/60 hover:text-white transition-all duration-300"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.roblox.com/users/4205808461/profile" class="text-white/60 hover:text-white transition-all duration-300"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0.16 0 23.68 24">
+                        <path fill="currentColor" d="M5.164 0L.16 18.928L18.836 24L23.84 5.072Zm8.747 15.354l-5.219-1.417l1.399-5.29l5.22 1.418l-1.4 5.29z"></path>
+                    </svg>
+                </a>
             </div>
-          </a>
-        <a href="https://www.roblox.com/communities/34817411/Southlake-Dentistry" class="group">
-          <img src="/assets/groups/southlake-logo.png" alt="Southlake Dentistry" loading="lazy">
-          <div>
-            <h3>Southlake Dentistry</h3>
-            <p>Development Team</p>
-          </div>
-        </a>
-        <a href="https://www.roblox.com/communities/33504510/Central-Medical-Institute" class="group">
-          <img src="/assets/groups/cmi-logo.png" alt="Central Medical Institute" loading="lazy">
-          <div>
-            <h3>Central Medical Institute</h3>
-            <p>Development Team</p>
-          </div>
-        </a>
-        <a href="https://www.roblox.com/communities/4595505/Blau-Hotels-Resorts" class="group">
-          <img src="/assets/groups/blau-logo.png" alt="Blau Hotels & Resorts" loading="lazy">
-          <div>
-            <h3>Blau Hotels & Resorts</h3>
-            <p>Development Team</p>
-          </div>
-        </a>
-        <a href="https://www.roblox.com/communities/8927586/Restaurant-Roleplay" class="group">
-          <img src="/assets/groups/rr-logo.png" alt="Restaurant Roleplay" loading="lazy">
-          <div>
-            <h3>Restaurant Roleplay</h3>
-            <p>Contributor</p>
-          </div>
-        </a>
-      </div>
-    </section>
-  </main>
-  <script>
-    document.querySelector('.menu-toggle').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('active');
-    });
-  </script>
+        </div>
+
+        <!-- Groups Section -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+            <h2 class="text-xl md:text-2xl font-bold mb-6 text-center">Groups</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="https://www.roblox.com/communities/35107354/Northport-Correctional" class="group flex items-center gap-4 p-4 bg-dark/80 border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20 hover:scale-[1.02] transition-all duration-300">
+                    <img src="/assets/groups/northport-logo.png" alt="Northport Correctional" class="w-12 h-12 rounded-lg group-hover:scale-105 transition-transform duration-300">
+                    <div>
+                        <h3 class="font-bold group-hover:text-white/90">Northport Correctional</h3>
+                        <p class="text-white/60 text-sm">Co Founder</p>
+                    </div>
+                </a>
+                <a href="https://www.roblox.com/communities/33205238/Aerborne-Airport-Roleplay" class="group flex items-center gap-4 p-4 bg-dark/80 border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20 hover:scale-[1.02] transition-all duration-300">
+                    <img src="/assets/groups/aerborne-logo.png" alt="Aerborne Airport Roleplay" class="w-12 h-12 rounded-lg group-hover:scale-105 transition-transform duration-300">
+                    <div>
+                        <h3 class="font-bold group-hover:text-white/90">Aerborne Airport Roleplay</h3>
+                        <p class="text-white/60 text-sm">Vice Chairman</p>
+                    </div>
+                </a>
+                <a href="https://www.roblox.com/communities/34817411/Southlake-Dentistry" class="group flex items-center gap-4 p-4 bg-dark/80 border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20 hover:scale-[1.02] transition-all duration-300">
+                    <img src="/assets/groups/southlake-logo.png" alt="Southlake Dentistry" class="w-12 h-12 rounded-lg group-hover:scale-105 transition-transform duration-300">
+                    <div>
+                        <h3 class="font-bold group-hover:text-white/90">Southlake Dentistry</h3>
+                        <p class="text-white/60 text-sm">Development Team</p>
+                    </div>
+                </a>
+                <a href="https://www.roblox.com/communities/33504510/Central-Medical-Institute" class="group flex items-center gap-4 p-4 bg-dark/80 border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20 hover:scale-[1.02] transition-all duration-300">
+                    <img src="/assets/groups/cmi-logo.png" alt="Central Medical Institute" class="w-12 h-12 rounded-lg group-hover:scale-105 transition-transform duration-300">
+                    <div>
+                        <h3 class="font-bold group-hover:text-white/90">Central Medical Institute</h3>
+                        <p class="text-white/60 text-sm">Development Team</p>
+                    </div>
+                </a>
+                <a href="https://www.roblox.com/communities/4595505/Blau-Hotels-Resorts" class="group flex items-center gap-4 p-4 bg-dark/80 border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20 hover:scale-[1.02] transition-all duration-300">
+                    <img src="/assets/groups/blau-logo.png" alt="Blau Hotels & Resorts" class="w-12 h-12 rounded-lg group-hover:scale-105 transition-transform duration-300">
+                    <div>
+                        <h3 class="font-bold group-hover:text-white/90">Blau Hotels & Resorts</h3>
+                        <p class="text-white/60 text-sm">Development Team</p>
+                    </div>
+                </a>
+                <a href="https://www.roblox.com/communities/8927586/Restaurant-Roleplay" class="group flex items-center gap-4 p-4 bg-dark/80 border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20 hover:scale-[1.02] transition-all duration-300">
+                    <img src="/assets/groups/rr-logo.png" alt="Restaurant Roleplay" class="w-12 h-12 rounded-lg group-hover:scale-105 transition-transform duration-300">
+                    <div>
+                        <h3 class="font-bold group-hover:text-white/90">Restaurant Roleplay</h3>
+                        <p class="text-white/60 text-sm">Contributor</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
 </body>
 </html>

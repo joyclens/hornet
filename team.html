@@ -1,307 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>HR Network - Team</title>
-    <meta name="robots" content="index,follow" />
-    <meta name="description" content="Join the premier network of HR professionals, where innovation meets expertise in managing roblox groups." />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="https://hr-network.xyz" />
-    <meta property="og:title" content="HR Network" />
-    <meta property="og:description" content="Join the premier network of HR professionals, where innovation meets expertise in managing roblox groups." />
-    <meta property="og:url" content="https://hr-network.xyz" />
-    <meta property="og:image" content="https://hr-network.xyz/assets/logo.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="500" />
-    <meta property="og:locale" content="en" />
-    <meta property="og:site_name" content="HR Network" />  
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="global-navbar.css">
-    <style>
-      :root {
-        --primary: #111;
-        --text: #fff;
-        --text-light: #888;
-        --bg: #000;
-        --accent: #333;
-        --transition: .3s cubic-bezier(.4, 0, .2, 1)
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>HR Network - Team</title>
+  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Join the premier network of HR professionals, where innovation meets expertise in managing roblox groups." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="https://hr-network.xyz" />
+  <meta property="og:title" content="HR Network - Team" />
+  <meta property="og:description" content="Join the premier network of HR professionals, where innovation meets expertise in managing roblox groups." />
+  <meta property="og:url" content="https://hr-network.xyz/team" />
+  <meta property="og:image" content="https://hr-network.xyz/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="500" />
+  <meta property="og:image:height" content="500" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:site_name" content="HR Network" />    
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      dark: '#030303',
+                      'dark-accent': '#0A0A0A',
+                  },
+                  fontFamily: {
+                      'satoshi': ['Satoshi', 'sans-serif'],
+                  },
+              }
+          }
       }
+  </script>
+</head>
+<body class="bg-dark font-satoshi text-white overflow-x-hidden touch-manipulation">
+  <div class="fixed -z-10 w-full h-screen bg-gradient-to-tr from-purple-500/10 via-transparent to-blue-500/10 opacity-50"></div>
+  <div class="fixed -z-10 w-full h-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-dark to-dark opacity-90"></div>
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Satoshi, sans-serif;
-        -webkit-text-size-adjust: 100%
-      }
-
-      body {
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-        overflow-x: hidden;
-        letter-spacing: -.02em;
-        -webkit-tap-highlight-color: transparent;
-        width: 100%
-      }
-
-      .team-section {
-        padding: 120px 2rem 2rem;
-        max-width: 1200px;
-        margin: 0 auto
-      }
-
-      .section-title {
-        text-align: center;
-        margin-bottom: 3rem;
-        font-size: 2.5rem;
-        font-weight: 700
-      }
-
-      .stats-container {
-        text-align: center;
-        margin-bottom: 3rem;
-        padding: 2rem;
-        background: rgba(255, 255, 255, .02);
-        border: 1px solid rgba(255, 255, 255, .06);
-        border-radius: 24px
-      }
-
-      .stats-number {
-        font-size: 3.5rem;
-        font-weight: 700;
-        color: var(--text);
-        margin-bottom: .5rem
-      }
-
-      .stats-label {
-        font-size: 1.2rem;
-        color: var(--text-light)
-      }
-
-      .team-category {
-        margin-bottom: 4rem
-      }
-
-      .category-title {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        color: var(--text);
-        border-bottom: 1px solid rgba(255, 255, 255, .06);
-        padding-bottom: .5rem
-      }
-
-      .board-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-        margin-bottom: 3rem
-      }
-
-      .board-card {
-        background: rgba(255, 255, 255, .02);
-        padding: 1.5rem;
-        border: 1px solid rgba(255, 255, 255, .06);
-        border-radius: 20px;
-        transition: var(--transition);
-        word-wrap: break-word
-      }
-
-      .board-card:hover {
-        transform: translateY(-5px);
-        background: rgba(255, 255, 255, .03);
-        border-color: rgba(255, 255, 255, .1)
-      }
-
-      .board-card h3 {
-        color: var(--text);
-        margin-bottom: 1rem;
-        font-size: 1.2rem
-      }
-
-      .board-card p {
-        color: var(--text-light);
-        font-size: .95rem
-      }
-
-      @media (max-width:768px) {
-        .team-section {
-          padding: 100px 1rem 1rem
-        }
-
-        .section-title {
-          font-size: 2rem
-        }
-
-        .stats-number {
-          font-size: 2.8rem
-        }
-
-        .stats-label {
-          font-size: 1rem
-        }
-
-        .category-title {
-          font-size: 1.6rem
-        }
-
-        .board-grid {
-          grid-template-columns: 1fr;
-          gap: 1.5rem
-        }
-      }
-
-      @media (max-width:480px) {
-        .section-title {
-          font-size: 1.8rem
-        }
-
-        .stats-container {
-          padding: 1.5rem
-        }
-
-        .stats-number {
-          font-size: 2.5rem
-        }
-
-        .board-card {
-          padding: 1.2rem
-        }
-
-        .board-card h3 {
-          font-size: 1.1rem
-        }
-
-        .board-card p {
-          font-size: .9rem
-        }
-      }
-
-      @media (hover:none) {
-        .board-card:hover {
-          transform: none
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="nav-content">
-        <a href="/" class="logo">HR Network</a>
-        <button class="menu-toggle">☰</button>
-        <div class="nav-links">
-          <a href="/">Home</a>
-          <a href="/partners">Partners</a>
-          <a href="/groups">Groups</a>
-          <a href="/contact">Contact</a>
-        </div>
+  <nav class="fixed top-0 w-full bg-dark/40 backdrop-blur-xl border-b border-white/5 px-4 py-4 z-50">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+          <a href="/" class="text-2xl font-bold text-white transition-all duration-300 hover:text-white/80">HR Network</a>
+          <div class="flex items-center gap-6 text-base">
+              <a href="/team" class="text-white/70 hover:text-white transition-all duration-300 p-2">Team</a>
+              <a href="/partners" class="text-white/70 hover:text-white transition-all duration-300 p-2">Partners</a>
+              <a href="/groups" class="text-white/70 hover:text-white transition-all duration-300 p-2">Groups</a>
+              <a href="/contact" class="text-white/70 hover:text-white transition-all duration-300 p-2">Contact</a>
+          </div>
       </div>
-    </nav>
-    <main class="team-section">
-      <h1 class="section-title">Our Team</h1>
-      <div class="stats-container">
-        <div id="memberCount" class="stats-number">0</div>
-        <div class="stats-label">HR Members</div>
+  </nav>
+
+  <main class="pt-28 pb-16 px-4">
+      <div class="max-w-6xl mx-auto">
+          <h1 class="text-3xl md:text-6xl font-bold text-center mb-12">Our Team</h1>
+            
+          <div class="p-6 md:p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm text-center mb-12 transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-white/[0.07]">
+              <div id="memberCount" class="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">0</div>
+              <div class="text-white/60 mt-2">HR Members</div>
+          </div>
+
+          <div class="space-y-12">
+              <section>
+                  <h2 class="text-xl md:text-3xl font-bold mb-6 pb-2 border-b border-white/10">Ownership</h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                      <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-white/[0.07]">
+                          <h3 class="text-lg md:text-xl font-bold mb-2">Founder</h3>
+                          <p class="text-white/60 text-sm md:text-base">xMa_hdi & Caviar_s</p>
+                      </div>
+                      <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-white/[0.07]">
+                          <h3 class="text-lg md:text-xl font-bold mb-2">Co-Founder</h3>
+                          <p class="text-white/60 text-sm md:text-base">xDel_za & xNa_sh</p>
+                      </div>
+                  </div>
+              </section>
+
+              <section>
+                  <h2 class="text-xl md:text-3xl font-bold mb-6 pb-2 border-b border-white/10">Project Management & Engineering</h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                      <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-white/[0.07]">
+                          <h3 class="text-lg md:text-xl font-bold mb-2">Project Manager</h3>
+                          <p class="text-white/60 text-sm md:text-base">Bhrenden & sadlyfragz</p>
+                      </div>
+                      <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-white/[0.07]">
+                          <h3 class="text-lg md:text-xl font-bold mb-2">Project Engineers</h3>
+                          <p class="text-white/60 text-sm md:text-base break-words">davriex, D3vin243, FedeeTide, TaviShadows, Iatinwo, totobandM52, Scxipted, oSudden, AlreadyPro, thecooljoe12346, pictureu, MeaxisDev, shareflow</p>
+                      </div>
+                  </div>
+              </section>
+
+              <section>
+                  <h2 class="text-xl md:text-3xl font-bold mb-6 pb-2 border-b border-white/10">Group Boards</h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                      <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-white/[0.07]">
+                          <h3 class="text-lg md:text-xl font-bold mb-2">Aerborne & Searborne Board</h3>
+                          <p class="text-white/60 text-sm md:text-base">EclipticalEnergy, Amaxra, foxoxmox, feuhia, TheAloneGeneral, ddust1n, Nikbusstop</p>
+                      </div>
+                      <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-white/[0.07]">
+                          <h3 class="text-lg md:text-xl font-bold mb-2">Restaurant Roleplay Presidential</h3>
+                          <p class="text-white/60 text-sm md:text-base">kiveura, aanqvI, bIaackout</p>
+                      </div>
+                      <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-white/[0.07]">
+                          <h3 class="text-lg md:text-xl font-bold mb-2">Central Medical Institute Board</h3>
+                          <p class="text-white/60 text-sm md:text-base">xHug_h, Toby_FOX12, frostipopz</p>
+                      </div>
+                      <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-white/[0.07]">
+                          <h3 class="text-lg md:text-xl font-bold mb-2">Blau Hotels & Resorts Board</h3>
+                          <p class="text-white/60 text-sm md:text-base">XavierValues, TimeValues, imeow4ari, xJa_s, simplexliz</p>
+                      </div>
+                      <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-white/[0.07]">
+                          <h3 class="text-lg md:text-xl font-bold mb-2">Northport Correctional Board</h3>
+                          <p class="text-white/60 text-sm md:text-base">joymura & Lucian_HasLeft</p>
+                      </div>
+                      <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-white/[0.07]">
+                          <h3 class="text-lg md:text-xl font-bold mb-2">Southlake Dentistry Board</h3>
+                          <p class="text-white/60 text-sm md:text-base">karaIine, Vnything, ToastKNG, xBry_ant</p>
+                      </div>
+                  </div>
+              </section>
+          </div>
       </div>
-      <div class="team-category">
-        <h2 class="category-title">Ownership</h2>
-        <div class="board-grid">
-          <div class="board-card">
-            <h3>Founder</h3>
-            <p>xMa_hdi & Caviar_s</p>
+  </main>
+
+  <footer class="py-12 md:py-20">
+      <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center text-white/60 pt-6 mt-6 border-t border-white/5">
+              <p class="text-sm">Programmed by <a href="https://guns.lol/joy" class="text-white hover:opacity-70 transition-all duration-300">joymura</a>, for <a href="https://www.roblox.com/communities/34700937/HR-Network#!/about" class="text-white hover:opacity-70 transition-all duration-300">HR Network</a> & <a href="https://www.roblox.com/users/1100110617/profile" class="text-white hover:opacity-70 transition-all duration-300">xMa_hdi</a>.</p>
           </div>
-          <div class="board-card">
-            <h3>Co-Founder</h3>
-            <p>xDel_za & xNa_sh</p>
-          </div>
-        </div>
       </div>
-      <div class="team-category">
-        <h2 class="category-title">Project Management & Engineering</h2>
-        <div class="board-grid">
-          <div class="board-card">
-            <h3>Project Manager</h3>
-            <p>Bhrenden & sadlyfragz</p>
-          </div>
-          <div class="board-card">
-            <h3>Project Engineers</h3>
-            <p>davriex, D3vin243, FedeeTide, TaviShadows, Iatinwo, totobandM52, Scxipted, oSudden, AlreadyPro, thecooljoe12346, pictureu, MeaxisDev, shareflow</p>
-          </div>
-        </div>
-      </div>
-      <div class="team-category">
-        <h2 class="category-title">Group Boards</h2>
-        <div class="board-grid">
-          <div class="board-card">
-            <h3>Aerborne & Searborne Board</h3>
-            <p>EclipticalEnergy, Amaxra, foxoxmox, feuhia, TheAloneGeneral, ddust1n, Nikbusstop</p>
-          </div>
-          <div class="board-card">
-            <h3>Restaurant Roleplay Presidential</h3>
-            <p>kiveura, aanqvI, bIaackout</p>
-          </div>
-          <div class="board-card">
-            <h3>Central Medical Institute Board</h3>
-            <p>xHug_h, Toby_FOX12, frostipopz</p>
-          </div>
-          <div class="board-card">
-            <h3>Blau Hotels & Resorts Board</h3>
-            <p>XavierValues, TimeValues, imeow4ari, xJa_s, simplexliz</p>
-          </div>
-          <div class="board-card">
-            <h3>Northport Correctional Board</h3>
-            <p>joymura & Lucian_HasLeft</p>
-          </div>
-          <div class="board-card">
-            <h3>Southlake Dentistry Board</h3>
-            <p>karaIine, Vnything, ToastKNG, xBry_ant</p>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script>
-      const menuToggle = document.querySelector(".menu-toggle"),
-        navLinks = document.querySelector(".nav-links");
-      menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active")
-      }), document.addEventListener("click", e => {
-        e.target.closest(".navbar") || navLinks.classList.remove("active")
-      });
+  </footer>
+
+  <script>
       async function fetchMemberCount() {
-        try {
-          const e = await fetch("https://groups.roblox.com/v1/groups/34700937", {
-            method: "GET",
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json"
-            },
-            mode: "cors"
-          });
-          if (!e.ok) throw new Error(`HTTP error! status: ${e.status}`);
-          const t = await e.json();
-          return t.memberCount || 261
-        } catch (e) {
-          return console.error("Error fetching member count:", e), 261
-        }
+          try {
+              const response = await fetch('https://groups.roblox.com/v1/groups/34700937');
+              if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+              const data = await response.json();
+              return data.memberCount || 261;
+          } catch (error) {
+              console.error('Error:', error);
+              return 261;
+          }
       }
 
-      function animateCount(e, t, n = 2e3) {
-        const o = performance.now();
-
-        function a(r) {
-          const s = r - o,
-            c = Math.min(s / n, 1),
-            i = Math.floor(c * t);
-          e.textContent = i, c < 1 && requestAnimationFrame(a)
-        }
-        requestAnimationFrame(a)
+      function animateCount(element, target) {
+          let current = 0;
+          const increment = Math.ceil(target / 100);
+          const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                  current = target;
+                  clearInterval(timer);
+              }
+              element.textContent = current.toLocaleString();
+          }, 20);
       }
-      window.addEventListener("DOMContentLoaded", async () => {
-        const e = await fetchMemberCount(),
-          t = document.getElementById("memberCount");
-        animateCount(t, e)
+
+      window.addEventListener('DOMContentLoaded', async () => {
+          const memberCount = await fetchMemberCount();
+          animateCount(document.getElementById('memberCount'), memberCount);
       });
-    </script>
-  </body>
+  </script>
+</body>
 </html>

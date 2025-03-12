@@ -1,329 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HR Network</title>
-    <meta name="robots" content="index,follow" />
-    <meta name="description" content="Join the premier network of HR professionals, where innovation meets expertise in managing roblox groups." />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="https://hr-network.xyz" />
-    <meta property="og:title" content="HR Network" />
-    <meta property="og:description" content="Join the premier network of HR professionals, where innovation meets expertise in managing roblox groups." />
-    <meta property="og:url" content="https://hr-network.xyz" />
-    <meta property="og:image" content="https://hr-network.xyz/assets/logo.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="500" />
-    <meta property="og:locale" content="en" />
-    <meta property="og:site_name" content="HR Network" />    
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="global-navbar.css">
-    <style>
-      :root {
-        --primary: #111;
-        --text: #fff;
-        --text-light: #888;
-        --bg: #000;
-        --accent: #333;
-        --transition: .3s cubic-bezier(.4, 0, .2, 1);
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Satoshi', sans-serif;
-      }
-
-      body {
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-        overflow-x: hidden;
-        letter-spacing: -0.02em;
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      .navbar:hover {
-        border-color: rgba(255, 255, 255, .15);
-        box-shadow: 0 0 40px rgba(255, 255, 255, .03);
-      }
-
-      .logo:hover {
-        opacity: .7;
-      }
-
-      .nav-links a:hover {
-        opacity: .7;
-      }
-
-      .hero {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        padding-top: 80px;
-      }
-
-      .hero-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 1rem;
-        text-align: center;
-        width: 100%;
-      }
-
-      .hero-text h1 {
-        font-size: clamp(2.5rem, 6vw, 5rem);
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        letter-spacing: -0.04em;
-        line-height: 1.1;
-        padding: 0 1rem;
-      }
-
-      .hero-text p {
-        font-size: clamp(1rem, 3vw, 1.25rem);
-        color: var(--text-light);
-        max-width: 650px;
-        margin: 0 auto 3rem;
-        letter-spacing: -0.02em;
-        padding: 0 1rem;
-      }
-
-      .cta-button {
-        display: inline-block;
-        padding: clamp(1rem, 3vw, 1.2rem) clamp(2rem, 5vw, 3rem);
-        background: var(--text);
-        color: var(--bg);
-        text-decoration: none;
-        border-radius: 100px;
-        font-weight: 600;
-        margin-bottom: 4rem;
-        transition: var(--transition);
-        letter-spacing: -0.02em;
-        touch-action: manipulation;
-      }
-
-      .cta-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 30px rgba(255, 255, 255, .08);
-      }
-
-      .groups-slider {
-        position: relative;
-        width: 100vw;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        overflow: hidden;
-        padding: 3rem 0;
-      }
-
-      .groups-slider::before,
-      .groups-slider::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 300px;
-        height: 100%;
-        z-index: 2;
-      }
-
-      .groups-slider::before {
-        left: 0;
-        background: linear-gradient(to right, var(--bg), transparent);
-      }
-
-      .groups-slider::after {
-        right: 0;
-        background: linear-gradient(to left, var(--bg), transparent);
-      }
-
-      .groups-container {
-        display: flex;
-        animation: slide 25s linear infinite;
-        gap: 2.5rem;
-        width: fit-content;
-      }
-
-      .groups-container:hover {
-        animation-play-state: paused;
-      }
-
-      .group-item {
-        flex: 0 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem;
-        background: rgba(255, 255, 255, .02);
-        border: 1px solid rgba(255, 255, 255, .06);
-        border-radius: 20px;
-        min-width: 180px;
-        transition: var(--transition);
-      }
-
-      .group-item:hover {
-        transform: translateY(-5px);
-        background: rgba(255, 255, 255, .03);
-        border-color: rgba(255, 255, 255, .1);
-      }
-
-      .group-icon {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 1rem;
-        border-radius: 16px;
-      }
-
-      .group-name {
-        color: var(--text);
-        font-size: 1rem;
-        text-align: center;
-        letter-spacing: -0.02em;
-      }
-
-      .footer {
-        text-align: center;
-        padding: 2rem;
-        color: var(--text-light);
-        font-size: 0.9rem;
-        font-family: 'Satoshi', sans-serif;
-        letter-spacing: -0.02em;
-      }
-
-      .footer a {
-        color: var(--text);
-        text-decoration: none;
-        transition: var(--transition);
-        font-family: 'Satoshi', sans-serif;
-        letter-spacing: -0.02em;
-      }
-
-      .footer a:hover {
-        opacity: 0.7;
-      }
-
-      @keyframes slide {
-        0% {
-          transform: translateX(0);
-        }
-
-        100% {
-          transform: translateX(-50%);
-        }
-      }
-
-      @media (max-width: 768px) {
-
-        .groups-slider::before,
-        .groups-slider::after {
-          width: 100px;
-        }
-
-        .hero {
-          padding-top: 100px;
-        }
-
-        .group-item {
-          min-width: 150px;
-          padding: 1.5rem;
-        }
-
-        .group-icon {
-          width: 60px;
-          height: 60px;
-        }
-
-        .group-name {
-          font-size: 0.9rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .hero-container {
-          padding: 0 0.5rem;
-        }
-
-        .cta-button {
-          width: 90%;
-          max-width: 300px;
-        }
-
-        .group-item {
-          min-width: 130px;
-          padding: 1.2rem;
-        }
-
-        .group-icon {
-          width: 50px;
-          height: 50px;
-        }
-
-        .group-name {
-          font-size: 0.8rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="nav-content">
-        <a href="/" class="logo">HR Network</a>
-        <button class="menu-toggle">☰</button>
-        <div class="nav-links">
-          <a href="/team">Team</a>
-          <a href="/partners">Partners</a>
-          <a href="/groups">Groups</a>
-          <a href="/contact">Contact</a>
-        </div>
-      </div>
-    </nav>
-    <section class="hero">
-      <div class="hero-container">
-        <div class="hero-text">
-          <h1>Empowering HR Excellence</h1>
-          <p>Join the premier network of HR professionals, where innovation meets expertise in managing roblox groups.</p>
-          <a href="https://www.roblox.com/communities/34700937/HR-Network" class="cta-button">Join Our Network</a>
-          <div class="groups-slider">
-            <div class="groups-container">
-              <div class="group-item">
-                <img src="https://hr-network.xyz/assets/cmi-logo.png" alt="Group 1" class="group-icon">
-                <span class="group-name">Central Medical Institute</span>
-              </div>
-              <div class="group-item">
-                <img src="https://hr-network.xyz/assets/southlake-logo.png" alt="Group 2" class="group-icon">
-                <span class="group-name">Southlake Dentistry</span>
-              </div>
-              <div class="group-item">
-                <img src="https://hr-network.xyz/assets/northport-logo.png" alt="Group 3" class="group-icon">
-                <span class="group-name">Northport Correctional</span>
-              </div>
-              <div class="group-item">
-                <img src="https://hr-network.xyz/assets/aerborne-logo.png" alt="Group 4" class="group-icon">
-                <span class="group-name">Aerborne Airport Roleplay</span>
-              </div>
-              <div class="group-item">
-                <img src="https://hr-network.xyz/assets/blau-logo.png" alt="Group 5" class="group-icon">
-                <span class="group-name">Blau Hotels & Resorts</span>
-              </div>
-              <div class="group-item">
-                <img src="https://hr-network.xyz/assets/seaborne-logo.png" alt="Group 6" class="group-icon">
-                <span class="group-name">Seaborne Cruiselines Roleplay</span>
-              </div>
-              <div class="group-item">
-                <img src="https://hr-network.xyz/assets/rr-logo.png" alt="Group 7" class="group-icon">
-                <span class="group-name">Restaurant Roleplay</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="footer"> Programmed with <span class="heart">🤍</span> by <a href="https://guns.lol/joy">joymura</a>, for <a href="https://www.roblox.com/communities/34700937/HR-Network#!/about">HR Network</a> & <a href="https://www.roblox.com/users/1100110617/profile">xMa_hdi</a>. </footer>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      document.querySelector('.menu-toggle').addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('active'));
-      document.querySelector('.groups-container').innerHTML += document.querySelector('.groups-container').innerHTML;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#030303',
+                        'dark-accent': '#0A0A0A',
+                    },
+                    fontFamily: {
+                        'satoshi': ['Satoshi', 'sans-serif'],
+                    },
+                }
+            }
+        }
     </script>
-  </body>
+    <style>
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-180px * 7 - 2.5rem * 7)); }
+        }
+        .groups-container {
+            display: flex;
+            gap: 2.5rem;
+            animation: slide 25s linear infinite;
+            width: fit-content;
+        }
+        .groups-container:hover {
+            animation-play-state: paused;
+        }
+        .group-item {
+            flex: 0 0 140px;
+            padding: 1rem;
+            background: rgba(255, 255, 255, .02);
+            border: 1px solid rgba(255, 255, 255, .06);
+            border-radius: 20px;
+            transition: .3s cubic-bezier(.4, 0, .2, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.1rem;
+        }
+        @media (min-width: 768px) {
+            .group-item {
+                flex: 0 0 180px;
+                padding: 1.5rem;
+            }
+        }
+        .group-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, .03);
+            border-color: rgba(255, 255, 255, .1);
+        }
+        .group-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+        }
+        @media (min-width: 768px) {
+            .group-icon {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .group-name {
+            color: #fff;
+            font-size: 0.875rem;
+            text-align: center;
+            letter-spacing: -0.02em;
+        }
+        @media (min-width: 768px) {
+            .group-name {
+                font-size: 1rem;
+            }
+        }    
+    </style>
+</head>
+<body class="bg-dark font-satoshi text-white overflow-x-hidden">
+    <div class="fixed -z-10 w-full h-screen bg-gradient-to-tr from-purple-500/10 via-transparent to-blue-500/10 opacity-50"></div>
+    <div class="fixed -z-10 w-full h-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-dark to-dark opacity-90"></div>
+
+    <nav class="fixed top-0 w-full bg-dark/40 backdrop-blur-xl border-b border-white/5 px-4 py-4 z-50">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+            <a href="/" class="text-2xl font-bold text-white transition-all duration-300 hover:text-white/80">HR Network</a>
+            <div class="flex items-center gap-6 md:gap-8 text-sm md:text-base">
+                <a href="/team" class="text-white/70 hover:text-white transition-all duration-300">Team</a>
+                <a href="/partners" class="text-white/70 hover:text-white transition-all duration-300">Partners</a>
+                <a href="/groups" class="text-white/70 hover:text-white transition-all duration-300">Groups</a>
+                <a href="/contact" class="text-white/70 hover:text-white transition-all duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="min-h-screen flex items-center pt-32 pb-20">
+            <div class="max-w-6xl mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center">
+                    <div class="text-center mb-16">
+                        <h1 class="text-4xl md:text-7xl font-bold mt-6 mb-4 leading-tight"><span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">HR Network</span></h1>
+                        <p class="text-white/60 text-lg md:text-xl">Join the premier network of HR professionals, where innovation meets expertise in managing roblox groups</p>
+                        <div class="mt-8 md:mt-10">
+                            <a href="https://www.roblox.com/communities/34700937/HR-Network" class="px-6 md:px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg transition-all duration-300 hover:opacity-90">Join Our Network</a>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full relative overflow-hidden">
+                        <div class="absolute left-0 top-0 w-[100px] md:w-[300px] h-full bg-gradient-to-r from-dark to-transparent z-10"></div>
+                        <div class="absolute right-0 top-0 w-[100px] md:w-[300px] h-full bg-gradient-to-l from-dark to-transparent z-10"></div>
+                        <div class="groups-container py-8 md:py-12">
+                            <div class="group-item">
+                                <img src="https://hr-network.xyz/assets/cmi-logo.png" alt="Central Medical Institute" class="group-icon">
+                                <span class="group-name">Central Medical Institute</span>
+                            </div>
+                            <div class="group-item">
+                                <img src="https://hr-network.xyz/assets/southlake-logo.png" alt="Southlake Dentistry" class="group-icon">
+                                <span class="group-name">Southlake Dentistry</span>
+                            </div>
+                            <div class="group-item">
+                                <img src="https://hr-network.xyz/assets/northport-logo.png" alt="Northport Correctional" class="group-icon">
+                                <span class="group-name">Northport Correctional</span>
+                            </div>
+                            <div class="group-item">
+                                <img src="https://hr-network.xyz/assets/aerborne-logo.png" alt="Aerborne Airport Roleplay" class="group-icon">
+                                <span class="group-name">Aerborne Airport Roleplay</span>
+                            </div>
+                            <div class="group-item">
+                                <img src="https://hr-network.xyz/assets/blau-logo.png" alt="Blau Hotels & Resorts" class="group-icon">
+                                <span class="group-name">Blau Hotels & Resorts</span>
+                            </div>
+                            <div class="group-item">
+                                <img src="https://hr-network.xyz/assets/rr-logo.png" alt="Restaurant Roleplay" class="group-icon">
+                                <span class="group-name">Restaurant Roleplay</span>
+                            </div>
+                            <div class="group-item">
+                                <img src="https://hr-network.xyz/assets/cmi-logo.png" alt="Central Medical Institute" class="group-icon">
+                                <span class="group-name">Central Medical Institute</span>
+                            </div>
+                            <div class="group-item">
+                                <img src="https://hr-network.xyz/assets/southlake-logo.png" alt="Southlake Dentistry" class="group-icon">
+                                <span class="group-name">Southlake Dentistry</span>
+                            </div>
+                            <div class="group-item">
+                                <img src="https://hr-network.xyz/assets/northport-logo.png" alt="Northport Correctional" class="group-icon">
+                                <span class="group-name">Northport Correctional</span>
+                            </div>
+                            <div class="group-item">
+                                <img src="https://hr-network.xyz/assets/aerborne-logo.png" alt="Aerborne Airport Roleplay" class="group-icon">
+                                <span class="group-name">Aerborne Airport Roleplay</span>
+                            </div>
+                            <div class="group-item">
+                                <img src="https://hr-network.xyz/assets/blau-logo.png" alt="Blau Hotels & Resorts" class="group-icon">
+                                <span class="group-name">Blau Hotels & Resorts</span>
+                            </div>
+                            <div class="group-item">
+                                <img src="https://hr-network.xyz/assets/rr-logo.png" alt="Restaurant Roleplay" class="group-icon">
+                                <span class="group-name">Restaurant Roleplay</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-16 md:py-20">
+            <div class="max-w-6xl mx-auto px-4 md:px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">Our Leadership</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-2xl mx-auto">
+                    <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm text-center relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-purple-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <img src="assets/profiles/mahdi.png" alt="xMa_hdi" class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-4 relative z-10"/>
+                        <h3 class="text-lg md:text-xl font-bold relative z-10">xMa_hdi</h3>
+                        <p class="text-white/60 relative z-10">Founder & CEO</p>
+                    </div>
+                    <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm text-center relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-purple-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <img src="assets/profiles/caviar.png" alt="Caviar_s" class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-4 relative z-10"/>
+                        <h3 class="text-lg md:text-xl font-bold relative z-10">Caviar_s</h3>
+                        <p class="text-white/60 relative z-10">Founder & CEO</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20">
+            <div class="max-w-6xl mx-auto px-4 md:px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">Network Statistics</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                    <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm text-center">
+                        <h3 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">7+</h3>
+                        <p class="text-white/60 mt-2">Partner Groups</p>
+                    </div>
+                    <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm text-center">
+                        <h3 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">216+</h3>
+                        <p class="text-white/60 mt-2">Network Members</p>
+                    </div>
+                    <div class="p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm text-center">
+                        <h3 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">2.1M+</h3>
+                        <p class="text-white/60 mt-2">Managed Members</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-16 md:py-20">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="text-center text-white/60 pt-6 md:pt-8 mt-6 md:mt-8 border-t border-white/5">
+                <p class="text-sm md:text-base">Programmed by <a href="https://guns.lol/joy" class="text-white hover:opacity-70 transition-all duration-300">joymura</a>, for <a href="https://www.roblox.com/communities/34700937/HR-Network#!/about" class="text-white hover:opacity-70 transition-all duration-300">HR Network</a> & <a href="https://www.roblox.com/users/1100110617/profile" class="text-white hover:opacity-70 transition-all duration-300">xMa_hdi</a>.</p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
