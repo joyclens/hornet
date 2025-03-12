@@ -31,76 +31,46 @@
         }
     </script>
     <style>
-        @keyframes slide {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-140px * 7 - 1.5rem * 7)); }
-        }
         @media (min-width: 768px) {
             @keyframes slide {
                 0% { transform: translateX(0); }
                 100% { transform: translateX(calc(-180px * 7 - 2.5rem * 7)); }
             }
-        }
-        .groups-container {
-            display: flex;
-            gap: 1.5rem;
-            animation: slide 20s linear infinite;
-            width: fit-content;
-        }
-        @media (min-width: 768px) {
             .groups-container {
+                display: flex;
                 gap: 2.5rem;
                 animation: slide 25s linear infinite;
+                width: fit-content;
             }
-        }
-        .groups-container:hover {
-            animation-play-state: paused;
-        }
-        .group-item {
-            flex: 0 0 140px;
-            padding: 0.75rem;
-            background: rgba(255, 255, 255, .02);
-            border: 1px solid rgba(255, 255, 255, .06);
-            border-radius: 16px;
-            transition: .3s cubic-bezier(.4, 0, .2, 1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.1rem;
-        }
-        @media (min-width: 768px) {
+            .groups-container:hover {
+                animation-play-state: paused;
+            }
             .group-item {
                 flex: 0 0 180px;
                 padding: 1.5rem;
+                background: rgba(255, 255, 255, .02);
+                border: 1px solid rgba(255, 255, 255, .06);
                 border-radius: 20px;
+                transition: .3s cubic-bezier(.4, 0, .2, 1);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.1rem;
             }
-        }
-        .group-item:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, .03);
-            border-color: rgba(255, 255, 255, .1);
-        }
-        .group-icon {
-            width: 35px;
-            height: 35px;
-            border-radius: 6px;
-        }
-        @media (min-width: 768px) {
+            .group-item:hover {
+                transform: translateY(-5px);
+                background: rgba(255, 255, 255, .03);
+                border-color: rgba(255, 255, 255, .1);
+            }
             .group-icon {
                 width: 50px;
                 height: 50px;
                 border-radius: 8px;
             }
-        }
-        .group-name {
-            color: #fff;
-            font-size: 0.75rem;
-            text-align: center;
-            letter-spacing: -0.01em;
-        }
-        @media (min-width: 768px) {
             .group-name {
+                color: #fff;
                 font-size: 1rem;
+                text-align: center;
                 letter-spacing: -0.02em;
             }
         }    
@@ -134,10 +104,10 @@
                         </div>
                     </div>
                     
-                    <div class="w-full relative overflow-hidden">
-                        <div class="absolute left-0 top-0 w-[50px] md:w-[300px] h-full bg-gradient-to-r from-dark to-transparent z-10"></div>
-                        <div class="absolute right-0 top-0 w-[50px] md:w-[300px] h-full bg-gradient-to-l from-dark to-transparent z-10"></div>
-                        <div class="groups-container py-6 md:py-12">
+                    <div class="w-full relative overflow-hidden hidden md:block">
+                        <div class="absolute left-0 top-0 w-[300px] h-full bg-gradient-to-r from-dark to-transparent z-10"></div>
+                        <div class="absolute right-0 top-0 w-[300px] h-full bg-gradient-to-l from-dark to-transparent z-10"></div>
+                        <div class="groups-container py-12">
                             <div class="group-item">
                                 <img src="/assets/groups/cmi-logo.png" alt="Central Medical Institute" class="group-icon">
                                 <span class="group-name">Central Medical Institute</span>
@@ -190,7 +160,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>        
         <section class="py-16 md:py-20">
             <div class="max-w-6xl mx-auto px-4 md:px-6">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">Our Leadership</h2>
